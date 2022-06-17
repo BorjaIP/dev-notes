@@ -23,6 +23,10 @@ commands:
     copyNoteLink: {}
 workspace:
     vaults:
+        - fsPath: work
+          selfContained: true
+          visibility: private
+          name: work
         - fsPath: .
           selfContained: true
           name: dev-notes
@@ -108,3 +112,9 @@ publishing:
     enableRandomlyColoredTags: true
     enableTaskNotes: true
     enablePrettyLinks: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - work
+            - dev-notes
+            - vault
