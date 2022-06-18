@@ -2,7 +2,7 @@
 id: oo65lf1fyvshu00tqre9avx
 title: Python
 desc: ''
-updated: 1655381583334
+updated: 1655493736530
 created: 1655321005187
 ---
 
@@ -27,7 +27,7 @@ flask routes
 ## Libraries
 
 [Databases](https://www.encode.io/databases/) - Conector multiple databases
-
+[Vulture](https://pypi.org/project/vulture/) - Dead code
 ## Pytest
 
 Understanding [fixtures](https://betterprogramming.pub/understand-5-scopes-of-pytest-fixtures-1b607b5c19ed)

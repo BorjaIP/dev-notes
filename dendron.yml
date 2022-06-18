@@ -1,7 +1,7 @@
 version: 5
 dev:
     enableWebUI: true
-    enablePreviewV2: true
+    enablePreviewV2: false
     enableSelfContainedVaults: true
 commands:
     lookup:
