@@ -2,7 +2,7 @@
 id: rqncsuqjf53tw5ea98sqsrq
 title: PostgreSQL
 desc: ''
-updated: 1655362512627
+updated: 1655549265860
 created: 1655362493969
 ---
 
@@ -50,3 +50,7 @@ WHERE
 	pg_stat_activity.datname = 'database_name'
 	AND pid <> pg_backend_pid();
 ```
+
+## Security
+
+[Generate TLS](https://www.crunchydata.com/blog/ssl-certificate-authentication-postgresql-docker-containers)

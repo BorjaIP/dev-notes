@@ -2,7 +2,7 @@
 id: ascyauq7iwl9zbwxlyuldwz
 title: Vscode
 desc: ''
-updated: 1655372210421
+updated: 1655568578559
 created: 1655369307281
 ---
 
@@ -10,7 +10,17 @@ created: 1655369307281
 
 ctrl+shift+p    Ejecutar cosas
 ctrl+p      Search files by name
+ctrl+e      Search files
 ctrl+r      Abrir folder o workspace
+ctrl+alt+o  Open Workspace
+ctrl+0      Go to File explorer
+alt+n       Create new file
+alt+shift+n Create new folder
+
+ctrl+g      Go to line
+
+alt+up/down Move line
+ctrl+alt+up/down    Multiple cursors
 
 ```bash
 # Commands
