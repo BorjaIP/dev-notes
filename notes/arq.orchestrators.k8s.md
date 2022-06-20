@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1655236183028
+updated: 1655728053950
 created: 1655235270066
 ---
 
@@ -60,6 +60,20 @@ kubectl konfig merge config filename > merged-config && mv -f merged-config conf
 ```
 
 ## Comands
+
+- Create labels
+
+```bash
+# Crate a label
+kubectl label nodes kworker-rj1 workload=production
+
+# Display labels
+kubectl get nodes --show-labels
+
+# Grep pods by labels
+kubectl label --list nodes kworker-rj1 | grep -i workload
+workload=production
+```
 
 - Clean replicaset
 

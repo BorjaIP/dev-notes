@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1655322361717
+updated: 1655728245470
 created: 1655319210228
 ---
 
@@ -167,6 +167,9 @@ Introducir aqui el DNS (IP del dispositivo)
 ## Network
 
 ```bash
+# Test internet connection
+curl -I https://www.google.com
+
 # show ips
 ip r
 # show IP and mask
