@@ -2,7 +2,7 @@
 id: 9xs75qhd3w54pnmfzhvhkhi
 title: ECS
 desc: ''
-updated: 1655726318372
+updated: 1655750738401
 created: 1655725681139
 ---
 
@@ -17,7 +17,8 @@ The primary service for running Docker containers on AWS is ECS. Other container
 
 You can also choose the **AWS EC2 launch type**, which will be familiar to many AWS users. Under this model, you pay for the AWS EC2 instances and **attached EBS volumes that you select to run your containers**. You can get bigger discounts with this model, but because instances are a fixed size, you have to be relatively certain about the requirements of your containers and avoid choosing an EC2 instance that’s too large or small.
 
-- Image
+- Image (Container)
+
 - Task Definition
   
   Necesitas definir un Task Definition (JSON file) para describir uno o más Containers (hasta 10) para definir todos los parámetros, CPU, Docker image y demás.
