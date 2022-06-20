@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1655320524971
+updated: 1655577631465
 created: 1655320512824
 ---
 
@@ -101,8 +101,8 @@ All config programs are in `%APPDATA%\`
 - [AMD Wraith Prism](https://landing.coolermaster.com/pages/amd-ryzen-wraith-prism-rgb-software/)
 - [Trident Z RGB](https://www.gskill.com/download/1502180912/1551690847/Trident-Z-Family-(RGB,-Royal,-Neo))
 - [RGB Fusion](https://www.gigabyte.com/MicroSite/512/download.html)
-- [Armor](https://rog.asus.com/armoury-crate/)
 - [Handbraker](https://handbrake.fr/) --> Video transcoder
+- [ShareX](https://getsharex.com/) --> Screen capture
 
 # User
 
@@ -131,5 +131,5 @@ Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Softwar
 
 Uninstall all GPU drivers
 
-[ddu](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html)
+[DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html)
 

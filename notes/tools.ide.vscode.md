@@ -2,13 +2,13 @@
 id: ascyauq7iwl9zbwxlyuldwz
 title: Vscode
 desc: ''
-updated: 1655568578559
+updated: 1655653429682
 created: 1655369307281
 ---
 
 ## Shortcuts
 
-ctrl+shift+p    Ejecutar cosas
+ctrl+shift+p    Ejecutar cosas          
 ctrl+p      Search files by name
 ctrl+e      Search files
 ctrl+r      Abrir folder o workspace
@@ -31,6 +31,13 @@ Developer: Startup Performance
 # Show status os VSCode
 code --status
 ```
+
+- Add Youtube videos.
+
+[![Blinking LEDs](http://img.youtube.com/vi/XAMVzS13HY0/0.jpg)](http://www.youtube.com/watch?v=XAMVzS13HY0 "Blinking LEDs")
+
+- Add a Pomodoro Iframe.
+    <!-- <iframe width="560" height="700" src="https://pomofocus.io/"></iframe> -->
 
 ## Remove lines
 
