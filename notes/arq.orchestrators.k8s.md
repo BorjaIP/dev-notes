@@ -2,11 +2,12 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1655728053950
+updated: 1655740217477
 created: 1655235270066
 ---
 
 - [Apps](#apps)
+- [Version](#version)
   - [Plugins](#plugins)
 - [Config](#config)
 - [Comands](#comands)
@@ -23,6 +24,15 @@ created: 1655235270066
 - [K9s](https://k9scli.io)
 - [Lens](https://github.com/lensapp/lens)
 - [Kubectx](https://github.com/ahmetb/kubectx)
+
+## Version
+
+```bash
+# display version
+kubectl version
+# display api version
+kubectl api-versions | grep -i apps
+```
 
 ### Plugins
 
@@ -56,7 +66,7 @@ kubectl config view --minify --flatten --context=minikube > minikube
 kubectl krew install konfig
 # merge config
 cd ~/.kube
-kubectl konfig merge config filename > merged-config && mv -f merged-config config
+kubectl konfig merge config <filename> > merged-config && mv -f merged-config config
 ```
 
 ## Comands
