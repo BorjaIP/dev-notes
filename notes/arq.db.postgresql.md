@@ -2,23 +2,25 @@
 id: rqncsuqjf53tw5ea98sqsrq
 title: PostgreSQL
 desc: ''
-updated: 1655549265860
+updated: 1655793721446
 created: 1655362493969
 ---
 
 ```bash
-# entrar BBDD
+# access DB
 psql -h localhost -U admin -W 
 psql -d postgres -U webadmin -W
+# AWS
+psql -U user -h hostname.rds.amazonaws.com -p 5432 database
 
-# lista todas las bases de datos
+# list all DB
 \l
 \c database;
 \dn
 # list tables
 \dt 
 
-# Borrar una Tabla de una BBDD
+# delete table in DB
 DELETE FROM tablename;
 
 # ACCESS DB
@@ -35,7 +37,7 @@ GRANT SELECT   ON ALL TABLES IN SCHEMA public TO read_only ;
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO read_write ;
 GRANT ALL ON ALL TABLES IN SCHEMA public TO admin ;
 
-# crear 
+# create 
 CREATE USER user WITH PASSWORD 'pass';
 CREATE DATABASE database;
 GRANT ALL PRIVILEGES ON DATABASE database TO user;

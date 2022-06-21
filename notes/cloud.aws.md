@@ -2,7 +2,7 @@
 id: eg76udplsw4zwbba6dd4tag
 title: Aws
 desc: ''
-updated: 1655752542101
+updated: 1655802679786
 created: 1655319754248
 ---
 
@@ -25,6 +25,7 @@ aws --profile name rds start-db-instance --db-instance-identifier name
 ```
 ## 
 
+- [[EC2 | cloud.aws.ec2]]
 - [[ECS | cloud.aws.ecs]]
 - [[ECR | cloud.aws.ecr]]
 
@@ -75,6 +76,40 @@ AWS IAM --> Configure access for specific resources
 
 Amazon CloudWatch --> Log applications, monitoring, alarms
 AWS Cloudtrail --> When you have many users and need track them 
+
+
+## Traffic
+
+- **Inbound** : Data _inbound_ **to Amazon** (that is, packet data that is **destined for the Amazon** cloud servers; for example, uploads and client requests) are free. 
+- **Outbound**: Data _outbound_ **from Amazon** is billed (that is, downloads from the cloud and **responses to client requests**).
+
+![](assets/images/network.jpg)
+
+- Calculate [Data Tansfer](https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer) for IN/OUT and in different Regions.
+
+# RDS
+
+[Pricing comparing instances](https://instances.vantage.sh/rds/?region=eu-west-1)
+
+- **RDS** Instance Types based on prices [Prices](https://aws.amazon.com/rds/instance-types/).
+
+# EBS
+
+- General Purpose SSD (gp2) Volumes: General Purpose SSD (gp2) volumes are the most common volume type. They were designed to be a **cost-effective storage** option for a wide variety of workloads. Gp2 volumes cover system volumes, dev and test environments, and various low-latency apps. They have a decent IOPS (starting from 100 and going all the way to 16000 IOPS) and a maximum throughput of 250MiB/s. You can combine multiple EBS volume types in a RAID to achieve even higher performance on a single instance.
+
+- Provisioned IOPS SSD (io1) Volumes: Provisioned IOPS SSD (io1) EBS volume types are a special type of volume created to fulfill the needs of **very intensive I/O workloads** that require very high throughput. They are useful for cases which are latency-sensitive, like **large database** workloads (e.g., MySQL, Cassandra, MongoDB, and Oracle) and critical business applications that need the kind of sustained performance gp2 volumes can’t achieve.
+
+- Throughput Optimized HDD (st1) Volumes: Throughput Optimized HDD (st1) volumes are a type of volume that offers **low-cost storage** while fulfilling the need for sequential workloads that require more throughput than IOPS. When working with **data warehouses**, log processing, **ETL** (extract, transform, load) or AWS EMR, this is a volume type to look into. Keep in mind that this volume type **cannot be used as a boot volume**.
+
+### What is an IOPS AWS?
+
+IOPS is an acronym for **input/output operations per second** and is a popular performance metric used to distinguish one storage type from another. Similar to device makers, AWS associates IOPS values to the volume component backing the storage option. Provisioned IOPS are an AWS EBS volume type designed to deliver predictable, high-level performance for I/O intensive workloads such as database applications.
+
+IOPS usage can be simply calculated by knowing the total read and write throughputs (ops) of your disk divided by the time in seconds within that period.
+
+> **_NOTE:_** IOPS Usage = (Total Read + Write Throughputs) / Time (in Seconds)
+
+Example: IOPS = ( 15000 + 100 ) / 300 = 
 
 # EKS
 aws eks --region eu-west-1 update-kubeconfig --profile utile

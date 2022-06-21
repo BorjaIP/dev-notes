@@ -2,7 +2,7 @@
 id: 9xs75qhd3w54pnmfzhvhkhi
 title: ECS
 desc: ''
-updated: 1655750738401
+updated: 1655793953178
 created: 1655725681139
 ---
 
@@ -43,10 +43,17 @@ Hay que desplegarlo detrás de un LB.
 [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
 
 
- export TF_VAR_rds_password=foobarbaz
+## Fargate
+
+- Testing the solution for **optimize cost-effective**.
+  
+**AWS offers a custom [distributed load testing solution](https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/)** for AWS Fargate that can help you establish your performance requirement under load, but be aware that this solution will incur costs as it utilizes several AWS services.
+
+
+export TF_VAR_rds_password=foobarbaz
 terraform graph | dot -Tpng > infrastructure_graph.png
 
-psql -U sbri -h sbri-db.cariaknc5efm.eu-west-2.rds.amazonaws.com -p 5432 sbri
+
 
 terraform destroy -target=aws_ecs_service.sbri-backend -target=aws_ecs_task_definition.sbri-backend -target=module.vpc.aws_eip.nat -target=aws_lb.sbri-lb -target=aws_autoscaling_group.ecs-cluster
 
