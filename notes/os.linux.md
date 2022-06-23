@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1655728245470
+updated: 1655988377684
 created: 1655319210228
 ---
 
@@ -293,8 +293,6 @@ find . -name \*.html -type f -delete
 port 3389
 # add /usr/local/bin
 export PATH=$PATH:/usr/local/bin
-# SVN
- wget -m -np --no-check-certificate --http-user="acronim" --http-password="pass" https://ptmsvn.gmv.es/promesa/muad/trunk/
 ```
 
 ## Java

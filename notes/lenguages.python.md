@@ -2,7 +2,7 @@
 id: oo65lf1fyvshu00tqre9avx
 title: Python
 desc: ''
-updated: 1655572579545
+updated: 1656004077067
 created: 1655321005187
 ---
 
@@ -28,8 +28,10 @@ flask routes
 
 ## Libraries
 
+[Pipdeptree](https://github.com/naiquevin/pipdeptree) - Display dependencies tree
 [Databases](https://www.encode.io/databases/) - Conector multiple databases
 [Vulture](https://pypi.org/project/vulture/) - Dead code
+
 ## Pytest
 
 Understanding [fixtures](https://betterprogramming.pub/understand-5-scopes-of-pytest-fixtures-1b607b5c19ed)

@@ -2,7 +2,7 @@
 id: gul7kdqpha5yep9wzvnmsrn
 title: Docker
 desc: ''
-updated: 1655318118134
+updated: 1655994244157
 created: 1655318081175
 ---
 
@@ -36,6 +36,7 @@ created: 1655318081175
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
+
 ## Apps
 
 - [Lazydocker](https://github.com/jesseduffield/lazydocker)
@@ -57,6 +58,7 @@ cat $HOME/.docker/config.json
 # SYSTEMD
 systemctl daemon-reload
 systemctl restart docker
+# display docker enviroments variables
 systemctl show docker --property Environment
 ```
 
