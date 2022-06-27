@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1655988377684
+updated: 1656341148031
 created: 1655319210228
 ---
 
@@ -24,6 +24,7 @@ created: 1655319210228
   - [Curl](#curl)
   - [Firewall](#firewall)
   - [Netstat](#netstat)
+  - [SS](#ss)
 - [GPU](#gpu)
 - [SSH](#ssh)
 - [Time](#time)
@@ -237,6 +238,14 @@ netstat -ant
 netstat -pnltu
 netstat -pluton
 netstat putona
+```
+
+### SS
+
+```bash
+ss -tapn
+ss -dst :https
+ss -dst :5432
 ```
 
 ---
