@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1656341148031
+updated: 1656432062635
 created: 1655319210228
 ---
 
@@ -80,6 +80,12 @@ ps fax
 ps aux
 
 ps -e -o pid,args | grep dvc | grep -v grep | awk '{print $1}'
+
+# proc file
+pid=1825
+ls -1 /proc/$pid/fd/*
+awk '!/\[/&&$6{_[$6]++}END{for(i in _)print i}' /proc/$pid/maps
+ls -l /proc/*/fd
 ```
 
 ### CPU
