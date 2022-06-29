@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1656432062635
+updated: 1656520338404
 created: 1655319210228
 ---
 
@@ -273,7 +273,7 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 # copy you plubic key inside authorized_keys
 ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@ipdestino
 # generate custom key
-ssh-keygen -f promesa
+ssh-keygen -f name
 # see access
 grep -i Failed /var/log/secure
 
