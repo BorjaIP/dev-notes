@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1655740217477
+updated: 1657029271230
 created: 1655235270066
 ---
 
@@ -81,8 +81,7 @@ kubectl label nodes kworker-rj1 workload=production
 kubectl get nodes --show-labels
 
 # Grep pods by labels
-kubectl label --list nodes kworker-rj1 | grep -i workload
-workload=production
+kubectl label --list nodes kworker-rj1 | grep -i workload workload=production
 ```
 
 - Clean replicaset
