@@ -2,7 +2,7 @@
 id: j3fw4ldb0j01jdqefl42iuo
 title: Jenkins
 desc: ''
-updated: 1656945037672
+updated: 1657269703292
 created: 1655320362766
 ---
 
@@ -27,7 +27,13 @@ script {
 ```
 
 - Select agent to run a Pipeline.
-  
+
+```bash
+agent {label 'slave'}
+```
+
+- Select Node to run a Pipeline.
+
 ```bash
 {
     node {
