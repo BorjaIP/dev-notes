@@ -2,7 +2,7 @@
 id: rqncsuqjf53tw5ea98sqsrq
 title: PostgreSQL
 desc: ''
-updated: 1655793721446
+updated: 1658485283255
 created: 1655362493969
 ---
 
@@ -20,6 +20,9 @@ psql -U user -h hostname.rds.amazonaws.com -p 5432 database
 # list tables
 \dt 
 
+# exit
+\q
+ 
 # delete table in DB
 DELETE FROM tablename;
 
