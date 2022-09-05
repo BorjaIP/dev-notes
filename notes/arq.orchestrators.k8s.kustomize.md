@@ -2,7 +2,7 @@
 id: qlua4vp9ifk441c5timakez
 title: Kustomize
 desc: ''
-updated: 1655740739885
+updated: 1661340633376
 created: 1655740681667
 ---
 
@@ -20,6 +20,8 @@ Kustomize/
 ```
 
 ```bash
-# build kustomize for show resources to apply
+# build kustomize for show resources before apply
 kubectl kustomize path/file
+# kustomize apply
+kubectl -k path/file
 ```

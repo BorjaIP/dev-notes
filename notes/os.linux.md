@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1656520338404
+updated: 1662031704006
 created: 1655319210228
 ---
 
@@ -308,6 +308,8 @@ find . -name \*.html -type f -delete
 port 3389
 # add /usr/local/bin
 export PATH=$PATH:/usr/local/bin
+# instead of cp for show progress
+rsync -avz
 ```
 
 ## Java

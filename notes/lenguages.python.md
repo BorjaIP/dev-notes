@@ -2,7 +2,7 @@
 id: oo65lf1fyvshu00tqre9avx
 title: Python
 desc: ''
-updated: 1656004077067
+updated: 1661252349064
 created: 1655321005187
 ---
 
@@ -10,7 +10,7 @@ created: 1655321005187
 
 ```bash
 pip install pipdeptree 
-pipdeptree > /result.txt
+pipdeptree > result.txt
 
 # licenses
 pip install pip-licenses

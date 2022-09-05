@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1655577631465
+updated: 1661323482982
 created: 1655320512824
 ---
 
@@ -10,7 +10,9 @@ created: 1655320512824
 - [Variables](#variables)
 - [Startup Programs](#startup-programs)
 - [Programs](#programs)
+  - [Dev](#dev)
 - [User](#user)
+  - [Folders](#folders)
 - [Powershell](#powershell)
 - [Key](#key)
 - [Drivers](#drivers)
@@ -104,9 +106,41 @@ All config programs are in `%APPDATA%\`
 - [Handbraker](https://handbrake.fr/) --> Video transcoder
 - [ShareX](https://getsharex.com/) --> Screen capture
 
+## Dev
+
+- [OpenLens](https://github.com/MuhammedKalkan/OpenLens) --> Kubernetes IDE
+- [mRemoteNG](https://github.com/mRemoteNG/mRemoteNG) --> Remote connections
+- Putty
+
+    Steps for Putty
+
+    For colors
+
+    https://github.com/AlexAkulov/putty-color-themes
+
+    Teerb.reg
+
+    1. Install MRemoteNG
+    2. Go to install directory (default C:\Program Files (x86)\mRemoteNG )
+    3. Rename PuTTYNG.exe to PuTTYNG.exe.bak
+    4. Copy the Putty portable executable and sessions folder to the installation location of MRemoteNG
+    5. Rename Putty.exe with PuTTYNG.exe
+
+
 # User
 
+## Folders
+
 User config is in `C:\Users\Borja`, for example `.ssh`
+
+```bash
+# hosts
+C:\Windows\System32\drivers\etc
+# temporal
+C:\Users\Borja\AppData\Local\Temp
+# ssh
+C:\Users\Borja\.ssh
+```
 
 - Install Inconsolata Nerd Fonts --> https://www.nerdfonts.com/
 - Keyboard layout --> https://github.com/thomasfaingnaert/win-us-intl-altgr/releases
