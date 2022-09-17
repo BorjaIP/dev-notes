@@ -19,7 +19,11 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggest.showSnippets": true,
         "editor.tabCompletion": "on",
-        "dendron.enableSelfContainedVaultWorkspace": true
+        "dendron.enableSelfContainedVaultWorkspace": true,
+        "workbench.colorCustomizations": {
+            "statusBar.noFolderBackground": "#434C5E",
+            "statusBar.debuggingBackground": "#434C5E"
+        }
     },
     "extensions": {
         "recommendations": [
