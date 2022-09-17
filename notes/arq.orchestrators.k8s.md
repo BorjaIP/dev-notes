@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1657029271230
+updated: 1663429684693
 created: 1655235270066
 ---
 
@@ -24,6 +24,7 @@ created: 1655235270066
 - [K9s](https://k9scli.io)
 - [Lens](https://github.com/lensapp/lens)
 - [Kubectx](https://github.com/ahmetb/kubectx)
+- [K8sCalculator](https://learnk8s.io/kubernetes-instance-calculator)
 
 ## Version
 
