@@ -12,8 +12,6 @@ commands:
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
     randomNote: {}
-    insertNote:
-        initialValue: templates
     insertNoteLink:
         aliasMode: none
         enableMultiSelect: false
@@ -77,7 +75,6 @@ workspace:
     maxPreviewsCached: 10
     maxNoteLength: 204800
     enableFullHierarchyNoteTitle: false
-    templateHierarchy: template
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
