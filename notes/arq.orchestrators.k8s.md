@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1663429684693
+updated: 1663608165334
 created: 1655235270066
 ---
 
@@ -18,13 +18,14 @@ created: 1655235270066
 - [Weave (Net connection)](#weave-net-connection)
 - [Bugs/Errors](#bugserrors)
 - [Scalling](#scalling)
+- [Security](#security)
 
 ## Apps
 
 - [K9s](https://k9scli.io)
 - [Lens](https://github.com/lensapp/lens)
 - [Kubectx](https://github.com/ahmetb/kubectx)
-- [K8sCalculator](https://learnk8s.io/kubernetes-instance-calculator)
+- [OpenCost](https://github.com/opencost/opencost)
 
 ## Version
 
@@ -282,5 +283,8 @@ PodDisruptionBudget
 
 - For HA you neeed to define Disruptions if a Node of the Cluster is down or upgraded. Stablish the minimum and maximum Pods are needed mandatory for your App.
 
+## Security
 
+Secure a K8s in AWS
 
+https://blog.appsecco.com/hacking-an-aws-hosted-kubernetes-backed-product-and-failing-904cbe0b7c0d
