@@ -22,13 +22,15 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
-        - fsPath: work
-          selfContained: true
-          visibility: private
-          name: work
-        - fsPath: .
-          selfContained: true
-          name: dev-notes
+        -
+            fsPath: work
+            selfContained: true
+            visibility: private
+            name: work
+        -
+            fsPath: .
+            selfContained: true
+            name: dev-notes
     journal:
         dailyDomain: daily
         name: journal
@@ -43,7 +45,7 @@ workspace:
         dateFormat: y.MM.dd
         addBehavior: asOwnDomain
         statusSymbols:
-            "": " "
+            '': ' '
             wip: w
             done: x
             assigned: a
@@ -51,7 +53,7 @@ workspace:
             blocked: b
             delegated: l
             dropped: d
-            pending: "y"
+            pending: 'y'
         taskCompleteStatus:
             - done
             - x
@@ -80,14 +82,12 @@ preview:
     enableNoteTitleForLink: true
     enableFrontmatterTags: true
     enableHashesForFMTags: false
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     copyAssets: true
@@ -109,6 +109,7 @@ publishing:
     enableRandomlyColoredTags: true
     enableTaskNotes: true
     enablePrettyLinks: true
+    searchMode: lookup
     duplicateNoteBehavior:
         action: useVault
         payload:

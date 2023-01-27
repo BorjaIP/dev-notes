@@ -2,7 +2,7 @@
 id: 04z14el6i8h2d9sgvjwzvai
 title: Openssl
 desc: ''
-updated: 1655490288900
+updated: 1671469531371
 created: 1655490070571
 ---
 
@@ -35,7 +35,7 @@ openssl pkcs12 -export -clcerts -inkey client.key -in client.crt -out client.p12
 ## Keytool
 # convertir jks
 keytool -importkeystore -srckeystore certificate.p12 -srcstoretype pkcs12 -destkeystore cert.jks
-keytool -list -v -keystore generic.jks
+keytool -list -keystore generic.jks -v
 # List CA
 keytool -list -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit
 ```
@@ -89,4 +89,7 @@ chmod 444 intermediate/public/intermediate.crt
 # verify intermediate CA
 openssl x509 -noout -text -in intermediate/certificates/intermediate.crt
 openssl verify -CAfile public/<ca-name>.crt intermediate/public/intermediate.crt
+
+# see content of a P12
+openssl pkcs12 -info -nodes -in yourfilename.p12
 ```
