@@ -2,7 +2,7 @@
 id: oo65lf1fyvshu00tqre9avx
 title: Python
 desc: ''
-updated: 1661252349064
+updated: 1674833657192
 created: 1655321005187
 ---
 
@@ -42,7 +42,11 @@ Distribution package for Python
 
 [Setup](https://setuptools.pypa.io/en/latest/setuptools.html)
 
-## Reglas
+## Sphinx
 
-- 440 indica como se tienen que sacar las releases
+Useful [extensions](https://sphinx-extensions.readthedocs.io/en/latest/index.html).
 
+```bash
+# autobuild sphinx documentation
+sphinx-autobuild docs/source docs/build/html
+```
