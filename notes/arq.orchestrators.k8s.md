@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1663608165334
+updated: 1675357369227
 created: 1655235270066
 ---
 
@@ -18,6 +18,7 @@ created: 1655235270066
 - [Weave (Net connection)](#weave-net-connection)
 - [Bugs/Errors](#bugserrors)
 - [Scalling](#scalling)
+- [Certificates](#certificates)
 - [Security](#security)
 
 ## Apps
@@ -283,8 +284,44 @@ PodDisruptionBudget
 
 - For HA you neeed to define Disruptions if a Node of the Cluster is down or upgraded. Stablish the minimum and maximum Pods are needed mandatory for your App.
 
+## Certificates
+
+```bash
+# conexion to API for see the certificate
+openssl s_client -showcerts -connect localhost:6443 | openssl x509 -noout -text 
+```
+
+Check certs expiration with `kubeadm`
+
+```bash
+kubeadm certs check-expiration
+```
+
+Renew certificates
+
+```bash
+kubeadm certs renew all
+# output
+Done renewing certificates. You must restart the kube-apiserver, kube-controller-manager, kube-scheduler and etcd, so that they can use the new certificates.
+```
+
+Find `admin.conf` file for restart the Pods
+
+```bash
+find / -name admin.conf
+kubectl --kubeconfig=/etc/kubernetes/admin.conf get nodes
+```
+
+Copy the new configuration
+
+```bash
+cp /etc/kubernetes/admin.conf /root/.kube/config
+```
+
 ## Security
 
 Secure a K8s in AWS
 
 https://blog.appsecco.com/hacking-an-aws-hosted-kubernetes-backed-product-and-failing-904cbe0b7c0d
+
+[def]: #apps

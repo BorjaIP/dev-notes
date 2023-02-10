@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1662031704006
+updated: 1675940965658
 created: 1655319210228
 ---
 
@@ -54,6 +54,8 @@ usermod -aG docker user_name
 
 useradd -u 1000 -g 1 -m -d /home/idmuser -c "Usuario IDMuser" -s /usr/bin/sh idmuser
 
+# last users access to machine
+last | head -n 10
 ```
 
 ## System info
@@ -136,6 +138,7 @@ sudo parted -l
 # See all services running
 sudo service --status-all
 sudo systemctl --type=service
+sudo systemctl --type=service --state=running
 # Stop|Start|Status services
 sudo service <NAME> status|stop|start
 sudo systemctl status|stop|start|enable|disable|is-enabled <NAME>

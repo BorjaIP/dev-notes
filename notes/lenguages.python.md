@@ -2,7 +2,7 @@
 id: oo65lf1fyvshu00tqre9avx
 title: Python
 desc: ''
-updated: 1674833657192
+updated: 1675793521946
 created: 1655321005187
 ---
 
@@ -34,7 +34,25 @@ flask routes
 
 ## Pytest
 
-Understanding [fixtures](https://betterprogramming.pub/understand-5-scopes-of-pytest-fixtures-1b607b5c19ed)
+- HTML report [pytest-html-reporter](https://github.com/prashanth-sams/pytest-html-reporter).
+- Coverage test [pytest-cov](https://github.com/pytest-dev/pytest-cov).
+- Understanding [fixtures](https://betterprogramming.pub/understand-5-scopes-of-pytest-fixtures-1b607b5c19ed).
+- Scopes [fixtures](https://docs.pytest.org/en/latest/how-to/fixtures.html#fixture-scopes).
+
+```bash
+# list fixtures availables
+pytest --fixtures
+# run single function
+pytest test_mod.py::test_func
+
+# Marker tests
+@pytest.mark.unit
+def test_get()
+pytest -m unit -v
+
+# coverage instructions
+--cov package --cov-branch --cov-report term-missing
+```
 
 ## Setuptools
 

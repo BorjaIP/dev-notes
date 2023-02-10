@@ -2,35 +2,37 @@
 id: gul7kdqpha5yep9wzvnmsrn
 title: Docker
 desc: ''
-updated: 1655994244157
+updated: 1676026954338
 created: 1655318081175
 ---
 
-- [Docker](#docker)
-  - [Instalation](#instalation)
-  - [Apps](#apps)
-  - [Configuration](#configuration)
-  - [Commands](#commands)
-    - [Stop all containers](#stop-all-containers)
-    - [Show process machine](#show-process-machine)
-    - [Show volume information](#show-volume-information)
-    - [Logging](#logging)
-    - [System](#system)
-    - [Stats](#stats)
-    - [Delete](#delete)
-      - [Delete all](#delete-all)
-      - [Delete unused or dangling](#delete-unused-or-dangling)
-      - [Delete unused containers](#delete-unused-containers)
-      - [Delete build cache](#delete-build-cache)
-      - [Delete images dangling](#delete-images-dangling)
-  - [Docker networking](#docker-networking)
-  - [Docker logging](#docker-logging)
-  - [Docker Inspect](#docker-inspect)
-  - [Docker Registry](#docker-registry)
-- [Docker Compose](#docker-compose)
-- [Docker Swarm](#docker-swarm)
+- [Installation](#installation)
+- [Apps](#apps)
+- [Configuration](#configuration)
+- [Commands](#commands)
+  - [Run](#run)
+  - [Stop all containers](#stop-all-containers)
+  - [Show process machine](#show-process-machine)
+  - [Show volume information](#show-volume-information)
+  - [Logging](#logging)
+  - [System](#system)
+  - [Stats](#stats)
+  - [Delete](#delete)
+    - [Delete all](#delete-all)
+    - [Delete unused or dangling](#delete-unused-or-dangling)
+    - [Delete unused containers](#delete-unused-containers)
+    - [Delete build cache](#delete-build-cache)
+    - [Delete images dangling](#delete-images-dangling)
+- [Docker networking](#docker-networking)
+- [Docker logging](#docker-logging)
+- [Docker Inspect](#docker-inspect)
+- [Docker Registry](#docker-registry)
 
-## Instalation
+# Docker  <!-- omit in toc -->
+
+- [[Compose | devops.container.docker.compose]]
+
+## Installation
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -61,6 +63,8 @@ systemctl restart docker
 # display docker enviroments variables
 systemctl show docker --property Environment
 ```
+
+Configure variables for proxy in docker [daemon](https://docs.docker.com/config/daemon/systemd/)
 
 ## Commands
 
@@ -201,37 +205,3 @@ docker login -u <user> -p <pass> https://url
 docker tag image:latest url/image:latest
 docker push url/image:latest
 ```
-
----
-
-# Docker Compose
-
-Build with and env file
-
-```bash
-docker-compose build --build-args $(cat envfile)
-```
-
-# Docker Swarm
-
-```bash
-# docker nodes 
-docker node ps
-docker node ls
-
-# docker services
-docker service ls
-docker service ps promesa_nifi
-docker service logs 
-
-# docker stack
-docker stack ls
-docker stack ps promesa
-docker stack services promesa
-docker stack rm down promesa
-docker stack deploy -c docker-stack.yml promesa
-
-# remove all services in docker swarm
-docker service rm $(docker service ls -q)
-```
-
