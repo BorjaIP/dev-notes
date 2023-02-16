@@ -2,10 +2,15 @@
 id: 04z14el6i8h2d9sgvjwzvai
 title: Openssl
 desc: ''
-updated: 1671469531371
+updated: 1676464637984
 created: 1655490070571
 ---
 
+## Self sign certificate
+
+```bash
+openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+```
 
 ```bash
 # verificar que es una CA
@@ -91,5 +96,7 @@ openssl x509 -noout -text -in intermediate/certificates/intermediate.crt
 openssl verify -CAfile public/<ca-name>.crt intermediate/public/intermediate.crt
 
 # see content of a P12
-openssl pkcs12 -info -nodes -in yourfilename.p12
+openssl pkcs12 -info -nodes -in yourfilename.p12 -passin pass:password
+# list P12
+keytool -list -v -keystore testbed1.p12 -storepass password -storetype PKCS12
 ```

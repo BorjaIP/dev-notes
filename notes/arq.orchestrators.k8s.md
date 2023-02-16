@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1675357369227
+updated: 1676556052343
 created: 1655235270066
 ---
 
@@ -53,6 +53,9 @@ kubectl neat get -- svc -n default myservice -o yaml
 
 # permissions manager
 https://github.com/sighupio/permission-manager
+
+# Config files
+kubectl krew install konfig
 ```
 
 ## Config
@@ -65,8 +68,6 @@ kubectl config use-context minikube
 # extract config
 kubectl config view --minify --flatten --context=minikube > minikube
 
-# Instalar mejor el plugin Konfig para hacer configuraciones
-kubectl krew install konfig
 # merge config
 cd ~/.kube
 kubectl konfig merge config <filename> > merged-config && mv -f merged-config config
