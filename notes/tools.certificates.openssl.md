@@ -2,7 +2,7 @@
 id: 04z14el6i8h2d9sgvjwzvai
 title: Openssl
 desc: ''
-updated: 1676464637984
+updated: 1676571810890
 created: 1655490070571
 ---
 
@@ -33,9 +33,6 @@ openssl x509 -in k8s/ca-key.crt -out k8s/ca-key.pem -outform PEM
 
 # extraer el CSR de un certificado
 openssl x509 -x509toreq -in name.crt -signkey name.key -out name.csr
-
-# convertirlo a .p12 para importarlo en Windows
-openssl pkcs12 -export -clcerts -inkey client.key -in client.crt -out client.p12 -name "MyKey"
 
 ## Keytool
 # convertir jks
@@ -94,9 +91,23 @@ chmod 444 intermediate/public/intermediate.crt
 # verify intermediate CA
 openssl x509 -noout -text -in intermediate/certificates/intermediate.crt
 openssl verify -CAfile public/<ca-name>.crt intermediate/public/intermediate.crt
+```
+
+## P12
+
+```bash
+# convert crt --> .p12 
+openssl pkcs12 -export -clcerts -inkey client.key -in client.crt -out client.p12 -name "MyKey"
 
 # see content of a P12
 openssl pkcs12 -info -nodes -in yourfilename.p12 -passin pass:password
+
 # list P12
 keytool -list -v -keystore testbed1.p12 -storepass password -storetype PKCS12
+
+# extract certs
+openssl pkcs12 -in path.p12 -out newfile.crt.pem -clcerts -nokeys
+
+# extract keys
+openssl pkcs12 -in path.p12 -out newfile.key.pem -nocerts -nodes
 ```

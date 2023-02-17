@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1675940965658
+updated: 1676654900411
 created: 1655319210228
 ---
 
@@ -177,6 +177,12 @@ Introducir aqui el DNS (IP del dispositivo)
 ## Network
 
 ```bash
+# Test conectivity
+curl -v telnet://$IP:$PORT
+
+# See traffic route
+traceroute 10.210.7.9
+
 # Test internet connection
 curl -I https://www.google.com
 
@@ -185,15 +191,18 @@ ip r
 # show IP and mask
 ip addr
 ip -4 -o address
+
 # show ports in use
 lsof -i -P -n
 sudo lsof -iTCP -sTCP:LISTEN -P
 lsof -p process-id
+
 # see DNS redirection
 nslookup URL
-nslookup dev-data.labs.gmv.com
+
 # see red in specific port
 tcpdump -i any port 443
+
 # docker network
 ifconfig docker0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'
 ```
