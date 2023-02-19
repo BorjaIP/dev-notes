@@ -2,9 +2,13 @@
 id: 3i5fhav92iioxiafg39jvnz
 title: Elasticsearch
 desc: ''
-updated: 1675091903754
+updated: 1676576710294
 created: 1675089115020
 ---
+
+## Alternatives
+
+Elasticsearch modify her License here is an alternative, [OpenSearch](https://github.com/opensearch-project/OpenSearch).
 
 ## Options
 

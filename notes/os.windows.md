@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1661323482982
+updated: 1676808799005
 created: 1655320512824
 ---
 
@@ -11,9 +11,9 @@ created: 1655320512824
 - [Startup Programs](#startup-programs)
 - [Programs](#programs)
   - [Dev](#dev)
-- [User](#user)
-  - [Folders](#folders)
+- [Folders](#folders)
 - [Powershell](#powershell)
+- [Winget](#winget)
 - [Key](#key)
 - [Drivers](#drivers)
 
@@ -127,9 +127,7 @@ All config programs are in `%APPDATA%\`
     5. Rename Putty.exe with PuTTYNG.exe
 
 
-# User
-
-## Folders
+# Folders
 
 User config is in `C:\Users\Borja`, for example `.ssh`
 
@@ -142,17 +140,50 @@ C:\Users\Borja\AppData\Local\Temp
 C:\Users\Borja\.ssh
 ```
 
-- Install Inconsolata Nerd Fonts --> https://www.nerdfonts.com/
-- Keyboard layout --> https://github.com/thomasfaingnaert/win-us-intl-altgr/releases
-- Edit profile in Powershell --> code $PROFILE
-
 # Powershell
+
+Personalize Windows Terminal.
+
+1. Install windows [terminal](https://github.com/microsoft/terminal).
+2. Install Powershell from Windows Store.
+3. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads) for active Icons.
+4. Change color scheme to [Base 16](https://github.com/ShiromMakkad/base16-windows-terminal) Ocean.
+5. Install [Startship](https://github.com/starship/starship) for custom prompt.
+6. Edit Powershell profile with VScode. 
+    ```bash
+    code $PROFILE
+    . $env:USERPROFILE\.config\powershell\profile.ps1
+    ```
+7. Create `profile.ps1` file in .config for custom configuration.
+6. Install [Terminal Icons](https://github.com/devblackops/Terminal-Icons).
+7. Install [PSReadLine](https://github.com/PowerShell/PSReadLine).
+8. Install [z Directory Jumper](https://github.com/jethrokuan/z).
+9. Install [fzf](https://github.com/junegunn/fzf) y [PSfzf](https://github.com/kelleyma49/PSFzf).
+
 
 Install icons
 
 ```bash
 Install-Module -Name Terminal-Icons -Repository PSGallery
 ```
+
+# Winget
+
+List of [packages](https://winget.run/) for install in Windows.
+
+```bash
+# install git
+winget install -d --id Git.Git
+# install gcc
+winget install -e --id libjpeg-turbo.libjpeg-turbo.GCC
+# install Neovim
+winget install -e --id Neovim.Neovim
+# install sudo
+winget install -e --id gerardog.gsudo
+# install jq
+winget install -e --id stedolan.jq
+```
+
 # Key
 
 For show windows key open `regedit` and see the key:
