@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1676808799005
+updated: 1676809422573
 created: 1655320512824
 ---
 
@@ -165,6 +165,9 @@ Install icons
 
 ```bash
 Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name PSReadLine -Force
+Install-Module -Name PSFzf -Force
+Install-Module -Name z -Force
 ```
 
 # Winget
