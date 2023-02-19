@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1676813026917
+updated: 1676818382130
 created: 1655320512824
 ---
 
@@ -13,6 +13,7 @@ created: 1655320512824
   - [Dev](#dev)
 - [Folders](#folders)
 - [Powershell](#powershell)
+  - [Install Modules](#install-modules)
 - [Winget](#winget)
 - [Key](#key)
 - [Drivers](#drivers)
@@ -140,6 +141,8 @@ C:\Users\Borja\AppData\Local\Temp
 C:\Users\Borja\.ssh
 ```
 
+- [Sort by 'Date Modified' but keep folders at the top?](https://answers.microsoft.com/en-us/windows/forum/all/sort-by-date-modified-but-keep-folders-at-the-top/746b8380-63fd-4d77-a568-fac11d917ad7)
+
 # Powershell
 
 Personalize Windows Terminal.
@@ -161,8 +164,13 @@ Personalize Windows Terminal.
 10. Install [z Directory Jumper](https://github.com/jethrokuan/z).
 11. Install [fzf](https://github.com/junegunn/fzf) y [PSfzf](https://github.com/kelleyma49/PSFzf).
 
+How to know which version of Powershell
 
-Install icons
+```bash
+$PSVersionTable
+```
+
+## Install Modules
 
 ```bash
 Install-Module -Name Terminal-Icons -Repository PSGallery
