@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1676809422573
+updated: 1676813026917
 created: 1655320512824
 ---
 
@@ -146,7 +146,8 @@ Personalize Windows Terminal.
 
 1. Install windows [terminal](https://github.com/microsoft/terminal).
 2. Install Powershell from Windows Store.
-3. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads) for active Icons.
+3. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads) for active Icons in particular [Inconsolata](https://github.com/ryanoasis/nerd-fonts/releases) from the releases and select `Inconsolata Regular Nerd Font Complete Windows Compatible.ttf`.
+   - Be careful with the [issue 509](https://github.com/ryanoasis/nerd-fonts/issues/509).
 4. Change color scheme to [Base 16](https://github.com/ShiromMakkad/base16-windows-terminal) Ocean.
 5. Install [Startship](https://github.com/starship/starship) for custom prompt.
 6. Edit Powershell profile with VScode. 
@@ -155,10 +156,10 @@ Personalize Windows Terminal.
     . $env:USERPROFILE\.config\powershell\profile.ps1
     ```
 7. Create `profile.ps1` file in .config for custom configuration.
-6. Install [Terminal Icons](https://github.com/devblackops/Terminal-Icons).
-7. Install [PSReadLine](https://github.com/PowerShell/PSReadLine).
-8. Install [z Directory Jumper](https://github.com/jethrokuan/z).
-9. Install [fzf](https://github.com/junegunn/fzf) y [PSfzf](https://github.com/kelleyma49/PSFzf).
+8. Install [Terminal Icons](https://github.com/devblackops/Terminal-Icons).
+9.  Install [PSReadLine](https://github.com/PowerShell/PSReadLine).
+10. Install [z Directory Jumper](https://github.com/jethrokuan/z).
+11. Install [fzf](https://github.com/junegunn/fzf) y [PSfzf](https://github.com/kelleyma49/PSFzf).
 
 
 Install icons
