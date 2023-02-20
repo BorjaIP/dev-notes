@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1676818382130
+updated: 1676890692109
 created: 1655320512824
 ---
 
@@ -148,8 +148,8 @@ C:\Users\Borja\.ssh
 Personalize Windows Terminal.
 
 1. Install windows [terminal](https://github.com/microsoft/terminal).
-2. Install Powershell from Windows Store.
-3. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads) for active Icons in particular [Inconsolata](https://github.com/ryanoasis/nerd-fonts/releases) from the releases and select `Inconsolata Regular Nerd Font Complete Windows Compatible.ttf`.
+2. Install Powershell from [winget](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3#install-powershell-using-winget-recommended).
+3. Install [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) for active Icons in particular [Inconsolata](https://github.com/ryanoasis/nerd-fonts/releases) from the releases and select `Inconsolata Regular Nerd Font Complete Windows Compatible.ttf`.
    - Be careful with the [issue 509](https://github.com/ryanoasis/nerd-fonts/issues/509).
 4. Change color scheme to [Base 16](https://github.com/ShiromMakkad/base16-windows-terminal) Ocean.
 5. Install [Startship](https://github.com/starship/starship) for custom prompt.
@@ -194,6 +194,8 @@ winget install -e --id Neovim.Neovim
 winget install -e --id gerardog.gsudo
 # install jq
 winget install -e --id stedolan.jq
+# install fzf
+winget install fzf
 ```
 
 # Key

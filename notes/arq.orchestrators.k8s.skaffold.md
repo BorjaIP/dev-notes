@@ -2,7 +2,7 @@
 id: mvxhifa5c5lk827roshc0ze
 title: Skaffold
 desc: ''
-updated: 1663055507778
+updated: 1676884253095
 created: 1655492202095
 ---
 

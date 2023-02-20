@@ -2,7 +2,7 @@
 id: 50wwtd36ekpjqvmcblv1upk
 title: Linux
 desc: ''
-updated: 1676654900411
+updated: 1676886345986
 created: 1655319210228
 ---
 
@@ -30,6 +30,7 @@ created: 1655319210228
 - [Time](#time)
 - [Commands](#commands)
 - [Java](#java)
+
 
 ## OS
 
@@ -215,10 +216,25 @@ curl http://example:5000/ -o /dev/null -s -w '%{http_code}\n'
 
 ### Firewall
 
+**IPTables**
+
 ```bash
 # show tables
 iptables -L INPUT -n -v
 iptables -L OUTPUT -n -v
+
+# add ports
+sudo iptables -A INPUT -s 10.0.0.0/8 -p tcp --dport 8080 -j ACCEPT
+sudo iptables -A INPUT -p tcp --match multiport --dports 1024:3000 -j ACCEPT
+
+# add IPs ranges
+sudo iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+sudo iptables -A INPUT -m range --src-range 192.168.0.1-192.168.0.255 -j ACCEPT
+```
+
+**Firewall-cmd**
+
+```bash
 # Firewall CentOS
 systemctl status|stop|start firewalld
 firewall-cmd --state
@@ -242,10 +258,14 @@ firewall-cmd --permanent --zone=public --add-port=3389/tcp
 # SAVE ALWAYS THE CHANGES
 firewall-cmd --runtime-to-permanent 
 firewall-cmd --reload 
+```
+
+**UFW**
+
+```bash
 # Debian
 ufw allow 5000
 ```
-
 
 ### Netstat
 
