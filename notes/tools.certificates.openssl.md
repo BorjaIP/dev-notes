@@ -2,7 +2,7 @@
 id: 04z14el6i8h2d9sgvjwzvai
 title: Openssl
 desc: ''
-updated: 1676571810890
+updated: 1677159139784
 created: 1655490070571
 ---
 
@@ -103,11 +103,28 @@ openssl pkcs12 -export -clcerts -inkey client.key -in client.crt -out client.p12
 openssl pkcs12 -info -nodes -in yourfilename.p12 -passin pass:password
 
 # list P12
-keytool -list -v -keystore testbed1.p12 -storepass password -storetype PKCS12
+keytool -list -v -keystore test.p12 -storepass password -storetype PKCS12
+
+# list jks
+keytool -v -list -keystore test.jks -storepass password
 
 # extract certs
 openssl pkcs12 -in path.p12 -out newfile.crt.pem -clcerts -nokeys
 
 # extract keys
 openssl pkcs12 -in path.p12 -out newfile.key.pem -nocerts -nodes
+```
+
+## CNF
+
+User `critical` for force to in this case load the custom CA.
+
+```conf
+[v3_req]
+subjectAltName                  = critical, @alt_names
+basicConstraints                = critical, CA:FALSE
+keyUsage                        = critical, digitalSignature, keyEncipherment, keyAgreement
+extendedKeyUsage                = critical, serverAuth, clientAuth
+subjectKeyIdentifier            = critical, hash
+authorityKeyIdentifier          = critical, keyid, issuer
 ```

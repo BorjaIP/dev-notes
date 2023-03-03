@@ -2,7 +2,7 @@
 id: rqncsuqjf53tw5ea98sqsrq
 title: PostgreSQL
 desc: ''
-updated: 1658485283255
+updated: 1677833336825
 created: 1655362493969
 ---
 
@@ -46,7 +46,7 @@ CREATE DATABASE database;
 GRANT ALL PRIVILEGES ON DATABASE database TO user;
 GRANT ALL PRIVILEGES ON SCHEMA database TO user;
 
-# Borrar las conexiones que tiene una Base de datos
+# Delete all conections
 SELECT
 	pg_terminate_backend(pg_stat_activity.pid)
 FROM
@@ -54,6 +54,21 @@ FROM
 WHERE
 	pg_stat_activity.datname = 'database_name'
 	AND pid <> pg_backend_pid();
+
+# Creats sample data
+CREATE TABLE products (
+	product_name char(50),
+	price int
+)
+
+INSERT INTO products (product_name, price)
+VALUES
+('Desktop Computer',800),
+('Laptop',1200),
+('Tablet',200),
+('Monitor',350),
+('Printer',150)
+SELECT * FROM products
 ```
 
 ## Security
