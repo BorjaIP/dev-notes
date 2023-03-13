@@ -2,7 +2,7 @@
 id: bw7jogrnauiehnik0wpe4b1
 title: K8s
 desc: ''
-updated: 1676556052343
+updated: 1678698502051
 created: 1655235270066
 ---
 
@@ -25,6 +25,8 @@ created: 1655235270066
 
 - [K9s](https://k9scli.io)
 - [Lens](https://github.com/lensapp/lens)
+  - [pod-menu](https://github.com/alebcay/openlens-node-pod-menu)
+  - [version-update](https://github.com/ottimis/lens-version-update)
 - [Kubectx](https://github.com/ahmetb/kubectx)
 - [OpenCost](https://github.com/opencost/opencost)
 

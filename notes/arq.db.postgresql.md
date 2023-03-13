@@ -2,7 +2,7 @@
 id: rqncsuqjf53tw5ea98sqsrq
 title: PostgreSQL
 desc: ''
-updated: 1677833336825
+updated: 1678700253832
 created: 1655362493969
 ---
 

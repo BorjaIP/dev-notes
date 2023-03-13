@@ -2,7 +2,7 @@
 id: uy66ufz0pc9831r2tbm2wmu
 title: Windows
 desc: ''
-updated: 1676890692109
+updated: 1678467938171
 created: 1655320512824
 ---
 
@@ -106,6 +106,7 @@ All config programs are in `%APPDATA%\`
 - [RGB Fusion](https://www.gigabyte.com/MicroSite/512/download.html)
 - [Handbraker](https://handbrake.fr/) --> Video transcoder
 - [ShareX](https://getsharex.com/) --> Screen capture
+- [NetworkManager](https://borntoberoot.net/NETworkManager/) --> Manage networks
 
 ## Dev
 
@@ -184,6 +185,8 @@ Install-Module -Name z -Force
 List of [packages](https://winget.run/) for install in Windows.
 
 ```bash
+# install startship
+winget install -d --id startship
 # install git
 winget install -d --id Git.Git
 # install gcc
